@@ -54,17 +54,6 @@ function cuid () {
   return letter + timestamp + counter + print + random;
 }
 
-cuid.slug = function slug () {
-  var date = new Date().getTime().toString(36),
-    counter = safeCounter().toString(36).slice(-4),
-    print = fingerprint().slice(0, 1) +
-      fingerprint().slice(-1),
-    random = randomBlock().slice(-2);
-
-  return date.slice(-2) +
-    counter + print + random;
-};
-
 cuid.fingerprint = fingerprint;
 
 module.exports = cuid;

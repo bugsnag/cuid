@@ -37,18 +37,8 @@ test('cuid()', function (t) {
   t.end();
 });
 
-test('cuid.slug()', function (t) {
-  t.ok(typeof cuid.slug() === 'string',
-    'cuid.slug() should return a string.');
-
-  t.ok(collisionTest(cuid.slug),
-    'cuid.slug() cuids should not collide.');
-
-  t.end();
-});
-
 // perform collision test only if we aren't in the browser
-test('cuid colissions', { skip: isInBrowser }, function (t) {
+test('cuid collisions', { skip: isInBrowser }, function (t) {
   t.ok(collisionTest(cuid),
   'cuids should not collide.');
 

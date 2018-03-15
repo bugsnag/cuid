@@ -1,10 +1,10 @@
 {
-  "name": "cuid",
-  "version": "2.1.0",
+  "name": "@bugsnag/cuid",
+  "version": "0.0.0",
   "description": "Collision-resistant ids optimized for horizontal scaling and performance. For node and browsers.",
   "author": {
-    "name": "Eric Elliott",
-    "url": "https://ericelliottjs.com"
+    "name": "Bugsnag",
+    "url": "https://bugsnag.com"
   },
   "main": "index.js",
   "browser": {
@@ -22,7 +22,7 @@
   ],
   "repository": {
     "type": "git",
-    "url": "https://github.com/ericelliott/cuid.git"
+    "url": "https://github.com/bugsnag/cuid.git"
   },
   "license": "MIT",
   "devDependencies": {
