@@ -1,6 +1,6 @@
 {
   "name": "@bugsnag/cuid",
-  "version": "0.0.0",
+  "version": "3.0.1",
   "description": "Collision-resistant ids optimized for horizontal scaling and performance. For node and browsers.",
   "author": {
     "name": "Bugsnag",
@@ -24,6 +24,10 @@
     "type": "git",
     "url": "https://github.com/bugsnag/cuid.git"
   },
+  "files": [
+    "lib",
+    "index.js"
+  ],
   "license": "MIT",
   "devDependencies": {
     "browserify": "14.4.0",
