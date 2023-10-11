@@ -32,12 +32,13 @@
   "devDependencies": {
     "browserify": "14.4.0",
     "eslint": "^3.9.1",
+    "jasmine": "^2.5.0",
+    "jasmine-core": "^2.8.0",
     "karma": "^1.7.0",
     "karma-browserify": "^5.1.1",
     "karma-chrome-launcher": "^2.2.0",
-    "karma-tap": "^3.1.1",
+    "karma-jasmine": "^1.1.1",
     "mkdirp": "^0.5.1",
-    "tape": "^4.6.2",
     "uglify-js": "^2.7.4",
     "watchify": "3.9.0",
     "webworkify": "^1.4.0"
@@ -47,7 +48,7 @@
     "lint": "eslint index.js lib test",
     "test": "npm run lint && npm run test:server && npm run test:browser",
     "test:browser": "karma start test/karma.conf.js",
-    "test:server": "tape test/**/*.js",
+    "test:server": "jasmine test/**/*.js",
     "prepublish": "npm run build"
   }
 }

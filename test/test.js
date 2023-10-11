@@ -1,4 +1,5 @@
-var test = require('tape');
+/* global describe, it, expect, pending */
+
 var cuid = require('../');
 
 // browser check function adapted from is-in-browser module
@@ -30,17 +31,18 @@ function collisionTest (fn) {
   return pass;
 }
 
-test('cuid()', function (t) {
-  t.ok(typeof cuid() === 'string',
-    'cuid() should return a string.');
-
-  t.end();
+describe('cuid()', function () {
+  it('should return a string', function () {
+    expect(typeof cuid()).toBe('string');
+  });
 });
 
-// perform collision test only if we aren't in the browser
-test('cuid collisions', { skip: isInBrowser }, function (t) {
-  t.ok(collisionTest(cuid),
-  'cuids should not collide.');
+describe('cuid collisions', function () {
+  it('should not collide', function () {
+    if (isInBrowser) {
+      pending('Skipping collision test in browser');
+    }
 
-  t.end();
+    expect(collisionTest(cuid)).toBe(true);
+  });
 });

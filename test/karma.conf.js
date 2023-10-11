@@ -3,7 +3,7 @@
 module.exports = function (config) {
   config.set({
     basePath: './..',
-    frameworks: [ 'browserify', 'tap' ],
+    frameworks: [ 'browserify', 'jasmine' ],
     preprocessors: {
       './test/**/*.js': [ 'browserify' ]
     },
@@ -19,7 +19,7 @@ module.exports = function (config) {
     reporters: [ 'progress' ],
     port: 9876,
     colors: true,
-    logLevel: config.LOG_WARN,
+    logLevel: config.LOG_INFO,
     autoWatch: false,
     browsers: [ 'ChromeHeadless' ],
     singleRun: true,
