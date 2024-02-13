@@ -7,6 +7,7 @@
     "url": "https://bugsnag.com"
   },
   "main": "index.js",
+  "types": "cuid.d.ts",
   "browser": {
     "./lib/fingerprint.js": "./lib/fingerprint.browser.js"
   },
@@ -26,6 +27,7 @@
   },
   "files": [
     "lib",
+    "cuid.d.ts",
     "index.js"
   ],
   "license": "MIT",
