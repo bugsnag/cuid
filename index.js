@@ -11,6 +11,7 @@
  */
 
 var fingerprint = require('./lib/fingerprint.js');
+var isCuid = require('./lib/is-cuid.js');
 var pad = require('./lib/pad.js');
 
 var c = 0,
@@ -38,7 +39,7 @@ function cuid () {
     // timestamp
     // warning: this exposes the exact date and time
     // that the uid was created.
-    timestamp = (new Date().getTime()).toString(base),
+    timestamp = new Date().getTime().toString(base),
 
     // Prevent same-machine collisions.
     counter = pad(safeCounter().toString(base), blockSize),
@@ -55,5 +56,6 @@ function cuid () {
 }
 
 cuid.fingerprint = fingerprint;
+cuid.isCuid = isCuid;
 
 module.exports = cuid;

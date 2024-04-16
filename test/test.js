@@ -46,3 +46,22 @@ describe('cuid collisions', function () {
     expect(collisionTest(cuid)).toBe(true);
   });
 });
+
+describe('isCuid()', function () {
+  it('should return true for generated cuids', function () {
+    expect(cuid.isCuid(cuid())).toBe(true);
+  });
+
+  it('should return false for strings that are too short', function () {
+    expect(cuid.isCuid('cuidistooshort')).toBe(false);
+  });
+
+  it('should return false for strings that are too long', function () {
+    expect(cuid.isCuid('cuidismorethan32characterssoisnotvalid')).toBe(false);
+  });
+
+  it('should return false for strings that do not match the format', function () {
+    expect(cuid.isCuid('doesnotbeginwithacsoisinvalid')).toBe(false);
+    expect(cuid.isCuid('contains-invalid-characters')).toBe(false);
+  });
+});
