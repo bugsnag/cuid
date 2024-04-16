@@ -1,5 +1,6 @@
 declare module '@bugsnag/cuid' {
-    function cuid(): string
+    export function fingerprint(): string
+    export function isCuid(value: unknown): value is string
 
-    export default cuid
+    export default function cuid(): string
 }
