@@ -1,6 +1,10 @@
-declare module '@bugsnag/cuid' {
-    export function fingerprint(): string
-    export function isCuid(value: unknown): value is string
+declare function cuid(): string;
+declare namespace cuid {
+    function fingerprint(): string
+    function isCuid(value: unknown): value is string
 
-    export default function cuid(): string
+    export { fingerprint };
+    export { isCuid };
 }
+
+export = cuid;
