@@ -42,7 +42,7 @@
     "karma-jasmine": "^1.1.1",
     "mkdirp": "^0.5.1",
     "uglify-js": "^2.7.4",
-    "watchify": "3.9.0",
+    "watchify": "^4.0.0",
     "webworkify": "^1.4.0"
   },
   "scripts": {
