@@ -8,6 +8,23 @@
   },
   "main": "index.js",
   "types": "cuid.d.ts",
+  "exports": {
+    ".": {
+      "import": "./index.mjs",
+      "default": "./index.js"
+    },
+    "./lib/fingerprint": {
+      "browser": "./lib/esm/fingerprint.browser.mjs",
+      "node": "./lib/esm/fingerprint.mjs",
+      "default": "./lib/fingerprint.js"
+    }
+  },
+  "imports": {
+    "#fingerprint": {
+      "browser": "./lib/esm/fingerprint.browser.mjs",
+      "default": "./lib/esm/fingerprint.mjs"
+    }
+  },
   "browser": {
     "./lib/fingerprint.js": "./lib/fingerprint.browser.js"
   },
@@ -28,7 +45,8 @@
   "files": [
     "lib",
     "cuid.d.ts",
-    "index.js"
+    "index.js",
+    "index.mjs"
   ],
   "license": "MIT",
   "devDependencies": {
