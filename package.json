@@ -6,31 +6,29 @@
     "name": "Bugsnag",
     "url": "https://bugsnag.com"
   },
-  "main": "dist/index.mjs",
+  "main": "dist/index.js",
   "types": "cuid.d.ts",
   "exports": {
     ".": {
-      "import": "./index.esm.mjs",
-      "require": "./dist/index.mjs"
+      "import": "./index.esm.js",
+      "require": "./dist/index.js"
     },
     "./lib/fingerprint": {
-      "browser": "./lib/fingerprint.browser.mjs",
-      "node": "./lib/fingerprint.mjs",
-      "default": "./dist/lib/fingerprint.mjs"
+      "browser": "./lib/fingerprint.browser.js",
+      "node": "./lib/fingerprint.js"
     }
   },
   "imports": {
     "#fingerprint": {
-      "browser": "./lib/fingerprint.browser.mjs",
-      "node": "./lib/fingerprint.mjs",
-      "default": "./lib/fingerprint.react-native.mjs"
+      "browser": "./lib/fingerprint.browser.js",
+      "node": "./lib/fingerprint.js"
     }
   },
   "browser": {
-    "./dist/lib/fingerprint.mjs": "./dist/lib/fingerprint.browser.mjs"
+    "./dist/lib/fingerprint.js": "./dist/lib/fingerprint.browser.js"
   },
   "react-native": {
-    "./dist/lib/fingerprint.mjs": "./dist/lib/fingerprint.react-native.mjs"
+    "./dist/lib/fingerprint.js": "./dist/lib/fingerprint.react-native.js"
   },
   "keywords": [
     "id",
@@ -47,7 +45,7 @@
     "lib",
     "dist",
     "cuid.d.ts",
-    "index.esm.mjs"
+    "index.esm.js"
   ],
   "license": "MIT",
   "devDependencies": {
@@ -67,7 +65,7 @@
   "scripts": {
     "prebuild": "rm -rf dist",
     "build": "rollup -c",
-    "lint": "eslint index.mjs lib test",
+    "lint": "eslint index.js lib test",
     "test": "npm run lint && npm run test:server && npm run test:browser",
     "test:browser": "karma start test/karma.conf.js",
     "test:server": "jasmine test/**/*.js",

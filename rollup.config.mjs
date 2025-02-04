@@ -11,18 +11,18 @@ const sharedOutput = {
 export default [
     {
         external: ['os'],
-        input: 'index.mjs',
+        input: 'index.js',
         output: sharedOutput
     },
     {
-        input: 'lib/fingerprint.browser.mjs',
+        input: 'lib/fingerprint.browser.js',
         output: {
             ...sharedOutput,
             dir: 'dist/lib'
         }
     },
     {
-        input: 'lib/fingerprint.react-native.mjs',
+        input: 'lib/fingerprint.react-native.js',
         output: {
             ...sharedOutput,
             dir: 'dist/lib'
