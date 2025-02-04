@@ -2,6 +2,7 @@ const sharedOutput = {
     format: 'cjs',
     dir: 'dist',
     preserveModules: true,
+    exports: 'default',
     generatedCode: {
         preset: 'es2015'
     }
