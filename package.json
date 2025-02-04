@@ -52,7 +52,6 @@
   "license": "MIT",
   "devDependencies": {
     "@rollup/plugin-alias": "^5.1.1",
-    "browserify": "17.0.0",
     "eslint": "^8.49",
     "jasmine": "^2.5.0",
     "jasmine-core": "^2.8.0",
@@ -61,8 +60,7 @@
     "karma-chrome-launcher": "^2.2.0",
     "karma-jasmine": "^1.1.1",
     "mkdirp": "^0.5.1",
-    "rollup": "^4.34.2",
-    "uglify-js": "^2.7.4",
+    "rollup": "^3.19.1",
     "watchify": "^4.0.0",
     "webworkify": "^1.4.0"
   },
