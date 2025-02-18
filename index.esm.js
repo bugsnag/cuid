@@ -10,9 +10,12 @@
  * MIT License
  */
 
-import fingerprint from './lib/fingerprint';
+import fingerprint from '#fingerprint';
 import createCuid from './lib/cuid';
+import isCuid from './lib/is-cuid';
 
 const cuid = createCuid(fingerprint);
+
+export { fingerprint, isCuid };
 
 export default cuid;
