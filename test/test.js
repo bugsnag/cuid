@@ -1,6 +1,6 @@
 /* global describe, it, expect, pending */
 
-var cuid = require('../');
+var cuid, { isCuid } = require('../');
 
 // browser check function adapted from is-in-browser module
 var isInBrowser = typeof window === 'object' &&
@@ -49,19 +49,19 @@ describe('cuid collisions', function () {
 
 describe('isCuid()', function () {
   it('should return true for generated cuids', function () {
-    expect(cuid.isCuid(cuid())).toBe(true);
+    expect(isCuid(cuid())).toBe(true);
   });
 
   it('should return false for strings that are too short', function () {
-    expect(cuid.isCuid('cuidistooshort')).toBe(false);
+    expect(isCuid('cuidistooshort')).toBe(false);
   });
 
   it('should return false for strings that are too long', function () {
-    expect(cuid.isCuid('cuidismorethan32characterssoisnotvalid')).toBe(false);
+    expect(isCuid('cuidismorethan32characterssoisnotvalid')).toBe(false);
   });
 
   it('should return false for strings that do not match the format', function () {
-    expect(cuid.isCuid('doesnotbeginwithacsoisinvalid')).toBe(false);
-    expect(cuid.isCuid('contains-invalid-characters')).toBe(false);
+    expect(isCuid('doesnotbeginwithacsoisinvalid')).toBe(false);
+    expect(isCuid('contains-invalid-characters')).toBe(false);
   });
 });
