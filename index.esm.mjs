@@ -11,8 +11,8 @@
  */
 
 import fingerprint from '#fingerprint';
-import createCuid from './lib/cuid';
-import isCuid from './lib/is-cuid';
+import createCuid from './lib/cuid.mjs';
+import isCuid from './lib/is-cuid.mjs';
 
 const cuid = createCuid(fingerprint);
 
