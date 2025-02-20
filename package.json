@@ -1,6 +1,6 @@
 {
   "name": "@bugsnag/cuid",
-  "version": "3.2.0",
+  "version": "3.2.1",
   "description": "Collision-resistant ids optimized for horizontal scaling and performance. For node and browsers.",
   "author": {
     "name": "Bugsnag",
