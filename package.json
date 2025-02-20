@@ -10,18 +10,20 @@
   "types": "cuid.d.ts",
   "exports": {
     ".": {
-      "import": "./index.esm.js",
+      "import": "./index.esm.mjs",
       "require": "./dist/index.js"
     },
     "./lib/fingerprint": {
-      "browser": "./lib/fingerprint.browser.js",
-      "node": "./lib/fingerprint.js"
+      "browser": "./lib/fingerprint.browser.mjs",
+      "node": "./lib/fingerprint.mjs",
+      "default": "./lib/fingerprint.react-native.mjs"
     }
   },
   "imports": {
     "#fingerprint": {
-      "browser": "./lib/fingerprint.browser.js",
-      "node": "./lib/fingerprint.js"
+      "browser": "./lib/fingerprint.browser.mjs",
+      "node": "./lib/fingerprint.mjs",
+      "default": "./lib/fingerprint.react-native.mjs"
     }
   },
   "browser": {
@@ -45,7 +47,7 @@
     "lib",
     "dist",
     "cuid.d.ts",
-    "index.esm.js"
+    "index.esm.mjs"
   ],
   "license": "MIT",
   "devDependencies": {
@@ -65,7 +67,7 @@
   "scripts": {
     "prebuild": "rm -rf dist",
     "build": "rollup -c",
-    "lint": "eslint index.js lib test",
+    "lint": "eslint index.mjs index.esm.mjs lib test",
     "test": "npm run lint && npm run test:server && npm run test:browser",
     "test:browser": "karma start test/karma.conf.js",
     "test:server": "jasmine test/**/*.js",

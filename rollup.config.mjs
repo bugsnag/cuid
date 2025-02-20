@@ -3,6 +3,7 @@ const sharedOutput = {
     dir: 'dist',
     preserveModules: true,
     exports: 'default',
+    entryFileNames: '[name].js',
     generatedCode: {
         preset: 'es2015'
     }
@@ -11,18 +12,18 @@ const sharedOutput = {
 export default [
     {
         external: ['os'],
-        input: 'index.js',
+        input: 'index.mjs',
         output: sharedOutput
     },
     {
-        input: 'lib/fingerprint.browser.js',
+        input: 'lib/fingerprint.browser.mjs',
         output: {
             ...sharedOutput,
             dir: 'dist/lib'
         }
     },
     {
-        input: 'lib/fingerprint.react-native.js',
+        input: 'lib/fingerprint.react-native.mjs',
         output: {
             ...sharedOutput,
             dir: 'dist/lib'
