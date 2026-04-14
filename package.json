@@ -10,6 +10,7 @@
   "types": "cuid.d.ts",
   "exports": {
     ".": {
+      "types": "./cuid.d.ts",
       "import": "./index.esm.mjs",
       "require": "./dist/index.js"
     },
